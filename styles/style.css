@@ -50,17 +50,17 @@ img {
 
 h1, 
 p,
-a,
-a:visited {
+.links,
+.links:visited {
     color: white;
 }
 
-a:hover {
+.links:hover {
     background-color: var(--title-accent);
     color: var(--grey-900);
 }
 
-a:focus {
+.links:focus {
     outline: 2px solid var(--title-accent);
     outline-offset: 4px;
 }
@@ -82,7 +82,7 @@ p {
     font-size: 2rem;
 }
 
-a {
+.links {
     background-color: var(--grey-700);
     border-radius: 1rem;
     width: 100%;
@@ -111,6 +111,14 @@ a {
     margin: 5rem 5rem;
 }
 
+footer {
+    opacity: 0;
+    transition: opacity .5s ease-in;
+}
+
+footer:hover, footer:focus {
+    opacity: 1;
+}
 
 @media (max-width: 600px) {
     .card {

@@ -12,7 +12,7 @@
 
     --fs-base: 1.4rem;
 
-    --ff-base: 'Inter', sans-serf;
+    --ff-base: 'Inter', sans-serif;
     --fw-normal: 400;
     --fw-bold: 600;
     --fw-heavy: 700;
@@ -60,6 +60,11 @@ a:hover {
     color: var(--grey-900);
 }
 
+a:focus {
+    outline: 2px solid var(--title-accent);
+    outline-offset: 4px;
+}
+
 h1 {
     margin-bottom: 1.5rem;
     font-size: 3.5rem;
@@ -94,6 +99,8 @@ a {
     background-color: var(--grey-800);
     border-radius: 2rem;
     width: 570px;
+
+    transition: width 0.3s ease;
 }
 
 .container {
@@ -102,4 +109,20 @@ a {
     align-items: center;
 
     margin: 5rem 5rem;
+}
+
+
+@media (max-width: 600px) {
+    .card {
+        width: 90%;
+    }
+
+    .container {
+        margin: 3rem 2rem;
+    }
+
+    a {
+        font-size: 1.8rem;
+        padding: 2rem;
+    }
 }
